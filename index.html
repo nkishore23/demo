@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo website</title>
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" />
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="font-sans antialiased">
+
+    <header class="relative bg-white shadow-sm">
+        <nav class="mx-auto flex items-center justify-between px-4 lg:px-8">
+            <div class="flex-shrink-0 py-4">
+                <a href="#" class="block">
+                    <img src="images/logo.jpg" alt="Logo" class="h-8">
+                </a>
+            </div>
+            <menu
+                class="py-4 lg:flex ml-auto lg:items-center lg:relative header-menu fixed top-0 -right-full lg:right-0 w-[300px] lg:px-0 px-4  h-screen lg:h-auto lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none z-20 transition-all duration-300">
+                <ul
+                    class="lg:flex lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 text-gray-700 text-sm font-semibold uppercase">
+                    <li><a href="#" class="hover:text-red-600 transition-colors duration-200">Experience</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors duration-200">Our Purpose</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors duration-200">Online Learning</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors duration-200">About</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors duration-200">Stories</a></li>
+                    <li class="relative group">
+                        <a href="#" class="flex items-center hover:text-red-600 transition-colors duration-200">
+                            More
+                            <svg class="ml-1 w-3 h-3 text-gray-500 group-hover:text-red-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </a>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48 py-2 z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sub-item 1</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sub-item 2</a>
+                        </div>
+                    </li>
+                </ul>
+            </menu>
+
+
+            <div class="flex items-center space-x-4 self-stretch ml-5">
+                <a href="#"
+                    class="h-full hidden lg:flex items-center bg-red-600 text-white text-sm font-semibold py-2 px-4 hover:bg-red-700 transition-colors duration-200">BOOK
+                    NOW</a>
+                <button id="searchIconBtn" class="text-gray-700 hover:text-red-600 transition-colors duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+                <button
+                    class="menu-icon lg:hidden text-gray-700 hover:text-red-600 transition-colors duration-200 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-slider relative h-screen overflow-hidden">
+        <div class="relative h-screen">
+
+            <video id="heroVideo" class="absolute inset-0 h-full w-full hero-video-background object-cover" autoplay
+                loop muted playsinline preload="auto">
+                <source src="videos/hero-video.mp4" type="video/mp4">
+                <source src="videos/hero-video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+
+
+            <button id="playPauseButton" class="flex items-center justify-center w-100 h-100 absolute inset-0 m-auto">
+                <img src="images/play-icon.png" alt="Play Icon"
+                    class="play-icon transform transition-transform duration-300 hover:scale-105">
+            </button>
+
+            <div
+                class="w-full absolute flex flex-row justify-between bottom-0 hero-content-wrapper text-white px-4 md:px-8 mb-8">
+                <h1 class="lora-italic text-4xl md:text-5xl font-normal mb-0 leading-tight">
+                    Inspiring Headline <span class="block">Goes Here</span>
+                </h1>
+                <div class="flex items-center text-white text-base font-semibold cursor-pointer group self-end">
+                    <span class="mr-2">GET INSPIRED</span>
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-y-1"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative h-screen">
+
+            <picture class="absolute inset-0">
+                <source srcset="images/slide-1.png" media="(min-width: 768px)">
+                <img src="images/slide-1.png" alt="Hero Image" class="w-full h-full object-cover">
+            </picture>
+            <div
+                class="w-full absolute flex flex-row justify-between bottom-0 hero-content-wrapper text-white px-4 md:px-8 mb-8">
+                <h1 class="lora-italic text-4xl md:text-5xl font-normal mb-0 leading-tight">
+                    Inspiring Headline <span class="block">Goes Here</span>
+                </h1>
+                <div class="flex items-center text-white text-base font-semibold cursor-pointer group self-end">
+                    <span class="mr-2">LEARN MORE</span>
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-y-1"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-16 md:py-24">
+
+        <section class="text-center mb-16 md:mb-24">
+            <h2 class="text-[#28324f] text-3xl font-bold text-gray-800 mb-6
+               relative after:block after:w-20 after:h-[2px] after:bg-[#e84b45]
+               after:mx-auto after:mt-6 after:mb-8 md:after:w-16 after:content-['']">
+                Add Your Powerful and Inspiring H1 Here
+            </h2>
+
+            <div class="expandable-content max-w-4xl mx-auto text-[#28324f]">
+                <p class="text-lg leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                    Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a,
+                    pede.
+                    Donec nec justo eget felis facilisis fermentum. Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna
+                    nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.
+                </p>
+                <div class="additional-text hidden text-lg leading-relaxed mt-4">
+                    This is additional text that will be hidden initially and revealed when the "plus" icon is clicked.
+                    It provides more detail and expands on the introductory paragraph, showcasing the functionality
+                    of the "read more" feature. This section can contain detailed information about the foundation's
+                    mission, values, or any extended narrative that wouldn't fit in the initial visible text.
+                    <br><br>
+                    For example, you might elaborate on specific programs, testimonials, or future plans. The goal is
+                    to provide a concise overview first, and then allow interested users to delve deeper without
+                    overwhelming everyone with too much information at once. This improves readability and user
+                    engagement.
+                </div>
+                <button
+                    class="border border-[#e84b45] w-5 h-5 rounded-full expand-button mt-4 flex items-center justify-center mx-auto focus:outline-none">
+                    <svg class="plus-icon w-3 h-3 text-[#e84b45]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <svg class="minus-icon w-5 h-5 hidden text-[#e84b45]" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div class="relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img src="images/tile1.jpg" alt="tile-1" class="w-full h-auto object-cover">
+            </div>
+            <div class="relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img src="images/tile2.jpg" alt="tile-2" class="w-full h-auto object-cover">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#1e2744] flex flex-col md:flex-row text-white">
+        <div class="w-full md:w-1/4 bg-red-600 flex items-center justify-center py-6 px-4 md:px-8">
+            <div class="flex items-center space-x-2 text-lg font-semibold uppercase whitespace-nowrap">
+                <img src="images/footer-logo.png" alt="tile-1" class="w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <div class="w-full md:w-3/4 py-6 px-4 md:px-8 flex items-center">
+            <div class="container mx-auto flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                <ul class="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2 text-sm">
+                    <li><a href="#" class="hover:underline transition-colors duration-200">FAQs</a></li>
+                    <li><a href="#" class="hover:underline transition-colors duration-200">Blog</a></li>
+                    <li><a href="#" class="hover:underline transition-colors duration-200">Image Gallery</a></li>
+                    <li><a href="#" class="hover:underline transition-colors duration-200">Public Health & Safety</a>
+                    </li>
+                    <li><a href="#" class="hover:underline transition-colors duration-200">Contact Us</a></li>
+                    <li><a href="#" class="hover:underline transition-colors duration-200">1440.tv</a></li>
+                    <li><a href="#" class="hover:underline transition-colors duration-200">1440 Foundation</a></li>
+                    <li><a href="#" class="hover:underline transition-colors duration-200">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div id="searchOverlay"
+        class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-start justify-center p-8 hidden">
+        <div class="search-container relative">
+            <button id="closeSearchBtn" class="absolute text-white hover:text-gray-300 transition-colors">
+                &times; </button>
+            <input type="text" id="searchOverlayInput" placeholder="Search here..."
+                class="w-full bg-transparent border-b-2 border-white text-white pr-12 text-3xl md:text-5xl py-4 focus:outline-none placeholder-gray-400">
+            <svg class="absolute right-0 bottom-4 w-8 h-8 text-white hidden md:block" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+        </div>
+    </div>
+    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300 hidden">
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+/* css/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* customs styles here */
+
+
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSans/700/MuseoSans700Regular.eot');
+    src: url('../fonts/MuseoSans/700/MuseoSans700Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSans/700/MuseoSans700Regular.woff2') format('woff2'),
+        url('../fonts/MuseoSans/700/MuseoSans700Regular.woff') format('woff'),
+        url('../fonts/MuseoSans/700/MuseoSans700Regular.ttf') format('truetype'),
+        url('../fonts/MuseoSans/700/MuseoSans700Regular.svg#MuseoSans700Regular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSans/300/MuseoSans300Regular.eot');
+    src: url('../fonts/MuseoSans/300/MuseoSans300Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSans/300/MuseoSans300Regular.woff2') format('woff2'),
+        url('../fonts/MuseoSans/300/MuseoSans300Regular.woff') format('woff'),
+        url('../fonts/MuseoSans/300/MuseoSans300Regular.ttf') format('truetype'),
+        url('../fonts/MuseoSans/300/MuseoSans300Regular.svg#MuseoSans300Regular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icons/icomoon.eot?v6thp4');
+    src: url('../fonts/icons/icomoon.eot?v6thp4#iefix') format('embedded-opentype'),
+        url('../fonts/icons/icomoon.ttf?v6thp4') format('truetype'),
+        url('../fonts/icons/icomoon.woff?v6thp4') format('woff'),
+        url('../fonts/icons/icomoon.svg?v6thp4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+    content: "\e900";
+}
+
+.icon-check-circle:before {
+    content: "\e901";
+}
+
+.icon-chevron-left:before {
+    content: "\e902";
+}
+
+.icon-chevron-right:before {
+    content: "\e903";
+}
+
+.icon-info:before {
+    content: "\e904";
+}
+
+.icon-instagram:before {
+    content: "\e905";
+}
+
+.icon-mail:before {
+    content: "\e906";
+}
+
+.icon-map:before {
+    content: "\e907";
+}
+
+.icon-map-pin:before {
+    content: "\e908";
+}
+
+.icon-phone:before {
+    content: "\e909";
+}
+
+.icon-twitter:before {
+    content: "\e90a";
+}
+
+.icon-user:before {
+    content: "\e90b";
+}
+
+body {
+    @apply bg-white font-sans leading-normal tracking-normal;
+    font-family: 'Museo Sans', sans-serif;
+}
+
+.font-sans {
+    font-family: 'Museo Sans', sans-serif;
+}
+
+.lora-italic {
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+
+.slick-arrow {
+    @apply bg-[#28324f] hover:bg-[#1f2533] z-10 w-20 h-20 rounded-full;
+
+    &:before {
+        font-family: 'icomoon';
+        font-size: 35px;
+    }
+
+    &.slick-prev {
+        @apply -left-10;
+
+        &:before {
+            content: "\e902";
+            margin-left: 30px;
+        }
+    }
+
+    &.slick-next {
+        @apply -right-10;
+
+        &:before {
+            content: "\e903";
+            margin-right: 30px;
+        }
+    }
+}
